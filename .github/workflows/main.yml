@@ -1,6 +1,0 @@
-git init
-git add .
-git commit -m "Deploy site with GitHub Pages"
-git branch -M main
-git remote add origin https://github.com/DuMoon/你的仓库名.git
-git push -u origin main
