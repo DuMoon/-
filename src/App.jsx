@@ -11,6 +11,14 @@ import {
   Phone,
   Sparkles,
 } from 'lucide-react';
+import contactImage from './assets/contact.jpg';
+import heroVideo from './assets/hero-bg.mp4';
+import heroPoster from './assets/hero-poster.jpg';
+import noiseTexture from './assets/noise.png';
+import portraitImage from './assets/portrait.jpg';
+import practiceAstrology from './assets/practice-astrology.webp';
+import practiceBazi from './assets/practice-bazi.webp';
+import practiceTarot from './assets/practice-tarot.webp';
 
 const stats = [
   { value: '5 年', label: '神秘学与身心研究' },
@@ -23,36 +31,41 @@ const projects = [
   {
     title: '八字结构分析',
     type: 'Bazi Cognition',
-    image: '/assets/practice-bazi.webp',
+    image: practiceBazi,
     meta: '不把八字当成定论，而是从结构、惯性与阶段节奏中，看见你如何形成选择模式。',
   },
   {
     title: '塔罗心理镜映',
     type: 'Tarot Reflection',
-    image: '/assets/practice-tarot.webp',
+    image: practiceTarot,
     meta: '以牌面作为心理投射的镜子，帮助你辨认情绪、关系动力与尚未说出口的真实需求。',
   },
   {
     title: '占星认知地图',
     type: 'Astrology Mapping',
-    image: '/assets/practice-astrology.webp',
+    image: practiceAstrology,
     meta: '用星盘梳理人格倾向、生命主题与时间压力点，目标不是预言，而是更清醒地回应当下。',
   },
 ];
 
 function App() {
   return (
-    <main>
+    <main
+      style={{
+        '--noise-image': `url(${noiseTexture})`,
+        '--contact-image': `url(${contactImage})`,
+      }}
+    >
       <section className="hero" id="home">
         <video
           className="heroVideo"
-          src="/assets/hero-bg.mp4"
+          src={heroVideo}
           autoPlay
           muted
           loop
           playsInline
           preload="metadata"
-          poster="/assets/hero-poster.jpg"
+          poster={heroPoster}
         />
         <div className="videoVeil" />
         <div className="grain" />
@@ -91,7 +104,7 @@ function App() {
       <section className="profile section" id="profile">
         <div className="shell profileGrid">
           <div className="portraitWrap">
-            <img src="/assets/portrait.jpg" alt="人物肖像" loading="lazy" decoding="async" />
+            <img src={portraitImage} alt="人物肖像" loading="lazy" decoding="async" />
           </div>
           <div className="profileContent">
             <p className="eyebrow">ABOUT THE CONSULTANT</p>

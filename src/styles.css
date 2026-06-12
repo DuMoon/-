@@ -99,7 +99,7 @@ video {
   pointer-events: none;
   opacity: 0.16;
   background-image:
-    url('/assets/noise.png'),
+    var(--noise-image),
     linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 180px 180px, 84px 84px, 84px 84px;
@@ -466,7 +466,7 @@ h1 {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(4, 5, 7, 0.94), rgba(4, 5, 7, 0.72)),
-    url('/assets/contact.jpg') center / cover;
+    var(--contact-image) center / cover;
 }
 
 .contactShell {
